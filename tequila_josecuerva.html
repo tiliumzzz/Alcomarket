@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Алкомаркет - Текила Jose Cuervo</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <hr>
+    <div class="product-page">
+        <h1>Текила Jose Cuervo</h1>
+
+        <a href="https://amwine.ru/upload/resize_cache/iblock/44a/620_620_1/44a7f466976d280c0cc7bf1f8f63e08e.png" target="_blank">
+            <img src="https://amwine.ru/upload/resize_cache/iblock/44a/620_620_1/44a7f466976d280c0cc7bf1f8f63e08e.png" alt="Jose Cuervo" width="200" height="500">
+        </a>
+
+        <h2>Описание</h2>
+        <p class="short-description"> Jose Cuervo — это популярная мексиканская серебряная текила (blanco) из голубой агавы (более 60% спиртов), обладающая кристально-прозрачным цветом. Не выдерживается в бочках, что придает ей свежий, мягкий вкус с оттенками агавы, цитрусовых и трав. Идеальна для коктейлей «Маргарита» и «Палома».</p>
+
+        <h2>Характеристики</h2>
+        <ul>
+            <li>Крепость: 38%</li>
+            <li>Объем: 0.7 л</li>
+            <li>Страна: Мексика</li>
+            <li>Выдержка: 0-2 месяца</li>
+            <li>Тип: Серебряная</li>
+        </ul>
+        <hr>
+        <h2>Подробное описание товара</h2>
+        <p class="full-description">Компания Jose Cuervo в настоящий момент является производителем текилы № 1 в мире, а бренд Cuervo входит в восьмерку самых известных мировых брендов в области производства крепких спиртных напитков. Вкус: вкус округлый, мягкий, сладковатый, с ярким и продолжительным послевкусием. Идеально подходит для различных коктейлей. Пьют также в чистом виде вместе с солью, лаймом и сангритой (сильно сдобренная перцем-чили и лаймом смесь томатного и апельсинового соков).</p>
+
+        <p>© Все права защищены</p>
+    </div>
+    <div id="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="cart-total">0</span> ₽</strong>
+            </div>
+            <button id="checkout-btn">Оплатить</button>
+            <button id="clear-cart-btn">Очистить корзину</button>
+            <button id="close-cart">Закрыть</button>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+
+</body>
+</html>

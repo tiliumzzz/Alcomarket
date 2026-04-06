@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Алкомаркет - Джин Hendrick's</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
+    </ul>
+    <hr>
+    <div class="product-page">
+        <h1>Джин Hendrick's</h1>
+
+        <a href="https://static.ast.wine/iblock/782/7829a45e5a1509e08474117b9ca9d4d6/2611c9fe5152308fa102211d7ef79796.jpg" target="_blank">
+            <img src="https://static.ast.wine/iblock/782/7829a45e5a1509e08474117b9ca9d4d6/2611c9fe5152308fa102211d7ef79796.jpg" alt="Hendrick's" width="200" height="500">
+        </a>
+
+        <h2>Описание</h2>
+        <p class="short-description"> Hendrick's — премиальный шотландский джин (41.4–44%), производимый с 1999 года компанией William Grant & Sons. </p>
+        <h2>Характеристики</h2>
+        <ul>
+            <li>Крепость: 41.4%</li>
+            <li>Объем: 0.7 л</li>
+            <li>Страна: Шотландия</li>
+
+        </ul>
+        <hr>
+        <h2>Подробное описание товара</h2>
+        <p class="full-description">Джин Hendrick’s изготавливается необычным образом с добавлением необычных ингредиентов, которые придают ему оригинальный вкус и аромат болгарской розы и свежего огурца. Hendrick’s — единственный джин, при производстве которого используются перегонные кубы двух типов и чистейшую воду из Шотландских естественных источников. Ручная работа и небольшие партии джина, подтверждают его неповторимость. Характеристики цвета: джин кристально чистого, прозрачного цвета. Джин обладает гармоничным вкусом с нотками специй, цитрусовых фруктов, можжевельника и легкой пикантностью. Послевкусие медленное, с освежающими нотками розы и огурца. Напиток имеет насыщенный аромат с нотками можжевельника, кориандра, розы, фиалки, свежестью огурца и цитрусовых фруктов. Джин идеально подходит для приготовления коктейлей, прекрасно сочетается с тоником.</p>
+
+        <p>© Все права защищены</p>
+    </div>
+    <div id="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="cart-total">0</span> ₽</strong>
+            </div>
+            <button id="checkout-btn">Оплатить</button>
+            <button id="clear-cart-btn">Очистить корзину</button>
+            <button id="close-cart">Закрыть</button>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
