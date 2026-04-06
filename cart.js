@@ -7,7 +7,7 @@ const products =[
     { id: 6, name: "Джин Hendrick's", price: 3200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7W3utX900mxexXXXZw5itmFxM6IpGUnqGHg&s", category: "gin", link: "pages/gin_hendricks.html"  }
 ];
 
-let cart = [];
+let cart =[];
 const calculateTotal = () => {
     return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 };
@@ -56,6 +56,7 @@ const addToCart = (event) => {
         } else {
             cart.push({ ...product, quantity: 1 });
         }
+        saveCart();
         updateCartDisplay();
         alert(`Товар "${product.name}" добавлен в корзину!`);
     }
@@ -98,11 +99,13 @@ const updateCartDisplay = () => {
 const removeFromCart = (event) => {
     const index = parseInt(event.target.dataset.index);
     cart.splice(index, 1);
+    saveCart();
     updateCartDisplay();
 };
 
 const clearCart = () => {
     cart = [];
+    saveCart();
     updateCartDisplay();
 };
 
@@ -168,6 +171,7 @@ const initProductPage = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    loadCart();    
     if (document.getElementById('products-container')) {
         displayProducts();
     }    
@@ -210,3 +214,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const saveCart = () => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+const loadCart = () => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    } else {
+        cart = [];
+    }
+    updateCartDisplay();
+};
+
