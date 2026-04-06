@@ -1,10 +1,10 @@
 const products =[
-    { id: 1, name: "Виски Jack Daniel's Honey (Медовый)", price: 2500, image: "https://static.decanter.ru/upload/images/413079/413079-viski-jack-daniels-honey-1-l-mb.jpg", category: "whiskey", link: "whiskey_jack_honey.html"},
-    { id: 2, name: "Водка Beluga", price: 3000, image: "https://s2.wine.style/images_gen/729/72932/0_0_695x600.webp", category: "vodka", link:"vodka_beluga.html" },
-    { id: 3, name: "Ром Barcelo Anejo", price: 2800, image: "https://amwine.ru/upload/resize_cache/iblock/7e5/620_620_1/7e5538d1ba4e40078e374c2e2797474c.png", category: "rum", link: "rum_barcelo_anejo.html" },
-    { id: 4, name: "Виски Chivas Regal 12 Years", price: 3500, image: "https://amwine.ru/upload/iblock/bd0/bd072f16597f97f6ff2135ac7152b36b.png", category: "whiskey", link: "whiskey_chivas.html" },
-    { id: 5, name: "Текила Jose Cuervo Silver", price: 2200, image: "https://amwine.ru/upload/resize_cache/iblock/44a/620_620_1/44a7f466976d280c0cc7bf1f8f63e08e.png", category: "tequila" , link: "tequila_josecuerva.html"},
-    { id: 6, name: "Джин Hendrick's", price: 3200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7W3utX900mxexXXXZw5itmFxM6IpGUnqGHg&s", category: "gin", link: "gin_hendricks.html"  }
+    { id: 1, name: "Виски Jack Daniel's Honey (Медовый)", price: 2500, image: "https://static.decanter.ru/upload/images/413079/413079-viski-jack-daniels-honey-1-l-mb.jpg", category: "whiskey", link: "pages/whiskey_jack_honey.html"},
+    { id: 2, name: "Водка Beluga", price: 3000, image: "https://s2.wine.style/images_gen/729/72932/0_0_695x600.webp", category: "vodka", link:"pages/vodka_beluga.html" },
+    { id: 3, name: "Ром Barcelo Anejo", price: 2800, image: "https://amwine.ru/upload/resize_cache/iblock/7e5/620_620_1/7e5538d1ba4e40078e374c2e2797474c.png", category: "rum", link: "pages/rum_barcelo_anejo.html" },
+    { id: 4, name: "Виски Chivas Regal 12 Years", price: 3500, image: "https://amwine.ru/upload/iblock/bd0/bd072f16597f97f6ff2135ac7152b36b.png", category: "whiskey", link: "pages/whiskey_chivas.html" },
+    { id: 5, name: "Текила Jose Cuervo Silver", price: 2200, image: "https://amwine.ru/upload/resize_cache/iblock/44a/620_620_1/44a7f466976d280c0cc7bf1f8f63e08e.png", category: "tequila" , link: "pages/tequila_josecuerva.html"},
+    { id: 6, name: "Джин Hendrick's", price: 3200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7W3utX900mxexXXXZw5itmFxM6IpGUnqGHg&s", category: "gin", link: "pages/gin_hendricks.html"  }
 ];
 
 let cart = [];
