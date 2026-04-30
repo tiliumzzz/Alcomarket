@@ -1,0 +1,58 @@
+<?php
+require_once 'includes/config.php';
+require_once 'includes/auth.php';
+
+$user = isAuthenticated() ? $auth->getCurrentUser() : null;
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Алкомаркет - Каталог</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.php">Главная</a></li>
+        <li><a href="catalog.php">Каталог</a></li>
+        <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
+        <?php if ($user): ?>
+            <li><a href="auth/dashboard.php">Личный кабинет (<?php echo htmlspecialchars($user['login']); ?>)</a></li>
+            <li><a href="auth/logout.php">Выход</a></li>
+        <?php else: ?>
+            <li><a href="auth/login.php">Вход</a></li>
+            <li><a href="auth/register.php">Регистрация</a></li>
+        <?php endif; ?>
+    </ul>
+
+    <div class="filter-section">
+        <h3>Фильтр по цене:</h3>
+        <input type="number" id="min-price" placeholder="Мин. цена" value="0">
+        <input type="number" id="max-price" placeholder="Макс. цена" value="10000">
+        <button id="apply-filter">Применить фильтр</button>
+        <button id="reset-filter">Сбросить</button>
+    </div>
+
+    <hr>
+    <h1>Каталог</h1>
+
+    <div id="products-container"></div>
+    
+    <div id="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="cart-total">0</span> ₽</strong>
+            </div>
+            <button id="checkout-btn">Оплатить</button>
+            <button id="clear-cart-btn">Очистить корзину</button>
+            <button id="close-cart">Закрыть</button>
+        </div>
+    </div>
+
+    <p>© Все права защищены</p>
+
+    <script src="cart.js"></script>
+</body>
+</html>

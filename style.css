@@ -4,7 +4,6 @@ body {
     margin: 20px;
 }
 
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -24,7 +23,6 @@ ul li a:hover {
     color: rgb(238, 33, 10);
     text-decoration: underline;
 }
-
 
 .product-page h2 {
     color: rgb(0, 0, 0);
