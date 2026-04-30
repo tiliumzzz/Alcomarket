@@ -1,0 +1,67 @@
+<?php
+require_once '../includes/config.php';
+require_once '../includes/auth.php';
+$user = isAuthenticated() ? $auth->getCurrentUser() : null;
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Алкомаркет - Водка Beluga</title>
+</head>
+<body>
+    <ul>
+        <li><a href="../index.php">Главная</a></li>
+        <li><a href="../catalog.php">Каталог</a></li>
+        <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
+        <?php if ($user): ?>
+            <li><a href="../auth/dashboard.php">Личный кабинет (<?php echo htmlspecialchars($user['login']); ?>)</a></li>
+            <li><a href="../auth/logout.php">Выход</a></li>
+        <?php else: ?>
+            <li><a href="../auth/login.php">Вход</a></li>
+            <li><a href="../auth/register.php">Регистрация</a></li>
+        <?php endif; ?>
+    </ul>
+    <hr>
+    <div class="product-page">
+        <h1>Водка Beluga</h1>
+
+        <a href="https://s2.wine.style/images_gen/729/72932/0_0_695x600.webp" target="_blank">
+            <img src="https://s2.wine.style/images_gen/729/72932/0_0_695x600.webp" alt="Белуга" width="250" height="500">
+        </a>
+
+        <h2>Описание</h2>
+        <p class="short-description">Beluga — премиальная водка из России. Производится из солодового спирта и воды из артезианских источников Сибири. Отличается мягким вкусом.</p>
+
+        <h2>Характеристики</h2>
+        <ul>
+            <li>Крепость: 40%</li>
+            <li>Объем: 0.7 л</li>
+            <li>Страна: Россия</li>
+            <li>Фильтрация: серебряная</li>
+            <li>Тип: Премиум</li>
+        </ul>
+        <div class="product-price" data-price="3000">Цена: 3000 ₽</div>
+        <button class="add-to-cart-page" data-id="2" data-name="Водка Beluga" data-price="3000">Добавить в корзину</button>
+        <hr>
+        <h2>Подробное описание товара</h2>
+        <p class="full-description">Водка "Белуга" — это результат сочетания вековых русских традиций и современных технологий. В ее состав входят не только высококачественный спирт и кристально чистая артезианская вода из сибирских источников, но и натуральные компоненты: душистый мед, настой овсяных хлопьев и экстракт расторопши, которая способствует мягкой детоксикации организма. Особенность производства — два этапа фильтрации и обязательный "отдых" водки после каждого этапа, что придает ей невероятную мягкость и чистоту вкуса. "Белуга" обладает насыщенным, но мягким вкусом с легкими солодовыми и травяными нотками и благородным, элегантным ароматом. Ее подают в чистом виде сильно охлажденной к изысканным мясным и рыбным блюдам, а также к традиционным русским разносолам.</p>
+        <hr>
+        <p>© Все права защищены</p>
+    </div>
+    <div id="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="cart-total">0</span> ₽</strong>
+            </div>
+            <button id="checkout-btn">Оплатить</button>
+            <button id="clear-cart-btn">Очистить корзину</button>
+            <button id="close-cart">Закрыть</button>
+        </div>
+    </div>
+    <script src="../cart.js"></script>
+</body>
+</html>

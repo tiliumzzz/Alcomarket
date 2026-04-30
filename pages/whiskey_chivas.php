@@ -1,0 +1,67 @@
+<?php
+require_once '../includes/config.php';
+require_once '../includes/auth.php';
+$user = isAuthenticated() ? $auth->getCurrentUser() : null;
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Алкомаркет - Виски Chivas Regal 12 Years</title>
+</head>
+<body>
+    <ul>
+        <li><a href="../index.php">Главная</a></li>
+        <li><a href="../catalog.php">Каталог</a></li>
+        <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
+        <?php if ($user): ?>
+            <li><a href="../auth/dashboard.php">Личный кабинет (<?php echo htmlspecialchars($user['login']); ?>)</a></li>
+            <li><a href="../auth/logout.php">Выход</a></li>
+        <?php else: ?>
+            <li><a href="../auth/login.php">Вход</a></li>
+            <li><a href="../auth/register.php">Регистрация</a></li>
+        <?php endif; ?>
+    </ul>
+    <hr>
+    <div class="product-page">
+        <h1>Виски Chivas Regal 12 Years</h1>
+
+        <a href="https://amwine.ru/upload/iblock/bd0/bd072f16597f97f6ff2135ac7152b36b.png" target="_blank">
+            <img src="https://amwine.ru/upload/iblock/bd0/bd072f16597f97f6ff2135ac7152b36b.png" alt="Chivas" width="250" height="500">
+        </a>
+
+        <h2>Описание</h2>
+        <p class="short-description">Премиальный шотландский купажированный виски (blended scotch) с богатой историей с 1801 года, отличающийся мягким, округлым вкусом. Основой купажа являются солодовые спирты из Спейсайда (в т.ч. Strathisla), с минимальной выдержкой 12 лет. Характерны ноты меда, яблок, ванили и орехов.</p>
+
+        <h2>Характеристики</h2>
+        <ul>
+            <li>Крепость: 40%</li>
+            <li>Объем: 0.7 л</li>
+            <li>Страна: Шотландия</li>
+            <li>Выдержка: не менее 12 лет</li>
+            <li>Тип: Купажированный</li>
+        </ul>
+        <div class="product-price" data-price="3500">Цена: 3500 ₽</div>
+        <button class="add-to-cart-page" data-id="4" data-name="Виски Chivas Regal 12 Years" data-price="3500">Добавить в корзину</button>
+        <hr>
+        <h2>Подробное описание товара</h2>
+        <p class="full-description">Chivas Regal — легендарный шотландский купажированный виски премиум-класса из региона Спейсайд, крепостью обычно 40%. Отличается мягким, богатым вкусом с нотами меда, фруктов и орехов, благодаря основе из односолодового виски Strathisla. Основная линейка включает 12, 18, 25-летние выдержки, а также спецвыпуски, такие как Mizunara и Extra. Виски производится методом двойной дистилляции и проходит холодную фильтрацию. Вкусовой профиль — сливочный, округлый, с продолжительным послевкусием. Chivas лучше всего подходит в качестве дижестива. Подается в чистом виде, с кубиком льда или в составе классических коктейлей при температуре 18-20 °C.</p>
+        <hr>
+        <p>© Все права защищены</p>
+    </div>
+    <div id="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="cart-total">0</span> ₽</strong>
+            </div>
+            <button id="checkout-btn">Оплатить</button>
+            <button id="clear-cart-btn">Очистить корзину</button>
+            <button id="close-cart">Закрыть</button>
+        </div>
+    </div>
+    <script src="../cart.js"></script>
+</body>
+</html>

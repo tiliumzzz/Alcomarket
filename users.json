@@ -1,0 +1,34 @@
+{
+    "admin": {
+        "id": 1,
+        "login": "admin",
+        "password_hash": "$2y$10$rIA4yUsDJ7O.rKXIg5g7WOg1KMzl7osZ9oGKd6TGPhQspvCmj\/P6a",
+        "email": "admin@alkomarket.ru",
+        "role": "admin",
+        "created_at": "29-04-2026 20:06:20"
+    },
+    "user": {
+        "id": 2,
+        "login": "user",
+        "password_hash": "$2y$10$z1sQVRj0VeayskaPeWRUFuXQywyPWS6UQ9EuKcI6jZBKcOroii7ve",
+        "email": "user@example.com",
+        "role": "user",
+        "created_at": "29-04-2026 20:06:20"
+    },
+    "demo": {
+        "id": 3,
+        "login": "demo",
+        "password_hash": "$2y$10$1EtzKvOwdTdMElClolg9mO58tOcOpOZ6koIVywx4M50oBT9Ytm4sW",
+        "email": "demo@example.com",
+        "role": "user",
+        "created_at": "29-04-2026 20:06:20"
+    },
+    "0": {
+        "id": 4,
+        "login": "tiliumzzz",
+        "email": "nikita@gmail.com",
+        "password_hash": "$2y$10$isX5WQbYOwil6ZvhcKvGd.YGiCfJZtaSFZAvBXxkM0vVhxwvrhOa2",
+        "role": "user",
+        "created_at": "2026-04-30 21:42:21"
+    }
+}
