@@ -1,0 +1,4 @@
+[30-04-2026 23:22:44] | IP: ::1 | LOGIN: tiliumzzz | ACTION: LOGOUT | DETAILS: Выход из системы
+[30-04-2026 23:22:53] | IP: ::1 | LOGIN: tiliumzzzz | ACTION: FAIL_LOGIN | DETAILS: Причина: Пользователь не найден
+[30-04-2026 23:46:59] | IP: ::1 | LOGIN: tiliumzzzz | ACTION: SUCCESS_LOGIN | DETAILS: Успешный вход в систему
+[30-04-2026 23:47:02] | IP: ::1 | LOGIN: tiliumzzzz | ACTION: LOGOUT | DETAILS: Выход из системы

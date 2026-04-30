@@ -32,7 +32,7 @@ function saveUsers($users) {
 
 function findUserByLogin($login) {
     $users = getUsers();
-    
+        
     foreach ($users as $key => $user) {
         if (isset($user['login']) && $user['login'] === $login) {
             return $user;

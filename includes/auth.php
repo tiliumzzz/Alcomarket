@@ -24,27 +24,27 @@ class Auth {
     }
     
     public function login($login, $password) {
-        $login = trim($login);
-        $user = findUserByLogin($login);
+    $login = trim($login);
+    $user = findUserByLogin($login);
+    
+    if (!$user) {
+        $this->logger->logFailedLogin($login, 'Пользователь не найден');
+        return ['success' => false, 'message' => 'Неверный логин или пароль'];
+    }
+    
+    if (password_verify($password, $user['password_hash'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_login'] = $user['login'];
+        $_SESSION['user_role'] = $user['role'];
+        $_SESSION['user_email'] = $user['email'];
+        $_SESSION['login_time'] = time();
         
-        if (!$user) {
-            $this->logger->logFailedLogin($login, 'Пользователь не найден');
-            return ['success' => false, 'message' => 'Неверный логин или пароль'];
-        }
-        
-        if (password_verify($password, $user['password_hash'])) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_login'] = $user['login'];
-            $_SESSION['user_role'] = $user['role'];
-            $_SESSION['user_email'] = $user['email'];
-            $_SESSION['login_time'] = time();
-            
-            $this->logger->logSuccessLogin($login);
-            return ['success' => true, 'message' => 'Добро пожаловать, ' . $login . '!'];
-        } else {
-            $this->logger->logFailedLogin($login, 'Неверный пароль');
-            return ['success' => false, 'message' => 'Неверный логин или пароль'];
-        }
+        $this->logger->logSuccessLogin($login);
+        return ['success' => true, 'message' => 'Добро пожаловать!'];
+    } else {
+        $this->logger->logFailedLogin($login, 'Неверный пароль');
+        return ['success' => false, 'message' => 'Неверный логин или пароль'];
+    }
     }
     
     public function logout() {
