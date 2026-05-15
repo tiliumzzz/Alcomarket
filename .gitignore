@@ -25,7 +25,10 @@ users.json
 /react-profile/favicon.svg
 /react-profile/icons.svg
 /react-profile/*.local
-/react-profile/src/assets/
+/react-profile/src/assets/hero.png
+/react-profile/src/assets/react.svg
+/react-profile/src/assets/vite.svg
+
 
 # Editor directories and files
 .vscode/*
