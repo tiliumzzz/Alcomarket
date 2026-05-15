@@ -22,6 +22,7 @@ $user = isAuthenticated() ? $auth->getCurrentUser() : null;
             <li><a href="../auth/login.php">Вход</a></li>
             <li><a href="../auth/register.php">Регистрация</a></li>
         <?php endif; ?>
+        <li><a href="http://localhost/alkomarket/react-profile/index.html">Моя визитка (React)</a></li>
     </ul>
     <hr>
     <div class="product-page">

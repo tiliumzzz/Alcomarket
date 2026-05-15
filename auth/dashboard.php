@@ -129,7 +129,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <li><a href="../catalog.php">Каталог</a></li>
         <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
         <li><a href="dashboard.php">Личный кабинет</a></li>
-        <li><a href="?action=logout" onclick="return confirm('Вы уверены, что хотите выйти?')">Выход</a></li>
+        <li><a href="http://localhost/alkomarket/react-profile/index.html">Моя визитка (React)</a></li>        <li><a href="?action=logout" onclick="return confirm('Вы уверены, что хотите выйти?')">Выход</a></li>
     </ul>
     <hr>
     

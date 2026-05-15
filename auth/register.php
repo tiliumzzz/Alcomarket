@@ -123,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <li><a href="#" id="cart-link">Корзина (<span id="cart-count">0</span>)</a></li>
         <li><a href="login.php">Вход</a></li>
         <li><a href="register.php">Регистрация</a></li>
+        <li><a href="http://localhost/alkomarket/react-profile/index.html">Моя визитка (React)</a></li>
     </ul>
     <hr>
     
