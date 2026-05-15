@@ -1,0 +1,33 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.app-header {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.back-link:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.app-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+}
