@@ -25,6 +25,7 @@ users.json
 /react-profile/favicon.svg
 /react-profile/icons.svg
 /react-profile/*.local
+/react-profile/src/assets/
 
 # Editor directories and files
 .vscode/*
