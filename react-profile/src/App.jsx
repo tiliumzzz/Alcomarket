@@ -1,16 +1,20 @@
 import ProfileCard from './components/ProfileCard';
+import UsersList from './components/UsersList';
 import './App.css';
 
-function App () {
-  return(
+function App() {
+  return (
     <div className="app">
       <div className="app-header">
         <a href="/" className="back-link">Вернуться на главную</a>
         <h2>React задание</h2>
       </div>
+
       <ProfileCard />
+      <div className="divider"></div>
+      <UsersList />
     </div>
   );
 }
 
-export default App
+export default App;
